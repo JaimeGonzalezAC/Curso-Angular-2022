@@ -1,7 +1,3 @@
-# Curso-Angular-2022
-
-Aplicaciones requeridas
-
 NodeJS
 https://nodejs.org/en/download/
 NpmJS
