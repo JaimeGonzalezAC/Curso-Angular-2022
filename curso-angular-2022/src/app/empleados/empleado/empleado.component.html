@@ -1,0 +1,20 @@
+<p>empleado works!</p>
+
+
+
+<br>
+
+<h3>Empresa: {{empresa}}</h3>
+<h3>Empresa: {{empresa2.value}}</h3>
+<h3>Empleado: {{nombre}}</h3>
+<h3>Edad: {{edad }} es {{mayor}}</h3>
+<input type="text" #empresa2>
+<input type="button" value="save" (click)="llamaEmpresa(empresa2.value)">
+<h3>Empresa: {{empresa3.value}}</h3>
+<br>
+<input type="text" #empresa3 (keyup)="0">
+{{textoRegistro}} <br>
+Registrado <input type="radio" value="si" name="nregistro" id="registro" [checked]="usuRegistrado" (click)="setUsuarioRegistrado($event)">
+No Registrado <input type="radio" value="no" name="nregistro" id="registro" [checked]="usuRegistrado" (click)="setUsuarioRegistrado($event)">
+<br>
+{{getRegistroUsuario()}}
