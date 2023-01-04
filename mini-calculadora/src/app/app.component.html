@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+<br>
+<div class="container-fluid">
+  <div class="row">
+    <form >
+      Number 1:<input class="form-control" type="number" name="PrimerNum" [(ngModel)]="PrimerNum"><br>
+    Number 2:<input class="form-control" type="number" name="SegundoNum" [(ngModel)]="SegundoNum">
+    <br>
+    <input type="button" class="btn btn-primary" value="Suma" (click)="sumar()">
+    <input type="button" class="btn btn-primary" value="Resta" (click)="restar()">
+    Resultado: {{resultado}}
+    </form>
+  </div>
+</div>

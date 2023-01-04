@@ -1,0 +1,11 @@
+<h1 style="text-align: center;">{{title}}</h1>
+<form>
+    <input type="text" name="nombre" [(ngModel)]="nombre"><br>
+    <input type="text" name="apellido" [(ngModel)]="apellido"><br>
+    <input type="submit" value="Registrar" (click)="mostrarTexto()">
+    <p *ngIf="mostrar">Usuario registrado {{nombre + ' ' + apellido}}</p>
+</form>
+
+<ul>
+    <li *ngFor="let entrada of entradas">{{entrada.titulo}}</li>
+</ul>
