@@ -7,5 +7,5 @@
 </form>
 
 <ul>
-    <li *ngFor="let entrada of entradas">{{entrada.titulo}}</li>
+    <li *ngFor="let entrada of entradas; let i = index"> Entrada:{{i +1}} Descripción: {{entrada.titulo}}</li>
 </ul>
