@@ -8,6 +8,8 @@ import { Empleado } from './empleado.model';
 })
 export class AppComponent {
   title = 'app-empleados';
+  mensaje  = "";
+  registrado = false;
   txtNombre:string = "";
   txtApellidos:string = "";
   txtCargo:string = "";
@@ -28,5 +30,7 @@ export class AppComponent {
   agregarEmpleado(){
     let newEmpleado = new Empleado(this.txtNombre,this.txtApellidos,this.txtCargo,this.txtSalario);
     this.empleados.push(newEmpleado);
+    this.registrado = true;
+    this.mensaje = "Usuario registrado con éxito ";
   }
 }

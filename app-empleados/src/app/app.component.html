@@ -31,14 +31,14 @@
       </form>
     </div>
   </div>
-</div>
-<div class="container-fluid">
-  <div class="row">
-
-    <div class="col-lg-1-12">
-      <div *ngFor="let empleado of empleados; let i = index">
-        {{i+1}} {{empleado.nombre}} {{empleado.apellido}} {{empleado.salario | currency}}
-      </div>
-    </div>
+  <div class="row">    
+    <p *ngIf="registrado; else sinRegistrar">{{mensaje}}  con el nombre de {{txtNombre}} {{txtApellidos}} y tiene el cargo de <span [ngStyle]="{color: txtCargo == 'red' ? 'diseñador' : 'black'}">{{txtCargo}}</span> </p>
   </div>
+  <ng-template #sinRegistrar>
+    <p>Nadie registrado</p>
+  </ng-template>
 </div>
+<app-app-empleado-hijo-c *ngFor="let empleado of empleados; let i = index" [empleadoDeLista]="empleado" [indice]="i">
+
+</app-app-empleado-hijo-c>
+
